@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="ka" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +43,7 @@
     <a href="https://wa.me/?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B2%20Aura%20space" target="_blank" 
        class="fixed bottom-5 right-5 z-50 pulse-whatsapp bg-emerald-500 hover:bg-emerald-600 text-white p-3.5 md:p-4 rounded-full shadow-2xl flex items-center gap-2.5 border border-emerald-300/30">
         <svg class="w-6 h-6 md:w-7 md:h-7 fill-current" viewBox="0 0 24 24"><path d="M12.031 0c-6.627 0-12 5.373-12 12 0 2.159.57 4.186 1.564 5.95l-1.625 5.93 6.069-1.59c1.71.928 3.67 1.458 5.762 1.458 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12zm6.529 16.993c-.27.761-1.348 1.401-2.179 1.579-.571.121-1.314.218-3.821-.82-3.208-1.328-5.277-4.578-5.437-4.79-.159-.213-1.302-1.733-1.302-3.303 0-1.57 1.222-2.344 1.656-2.344.27 0 .541.002.778.012.253.01.591-.095.927.712.347.832 1.189 2.903 1.294 3.118.106.213.177.464.035.748-.142.283-.213.46-.425.712-.213.253-.448.563-.641.756-.213.213-.435.445-.187.871.248.425 1.103 1.82 2.37 2.949 1.63 1.452 3.003 1.902 3.428 2.115.425.213.673.177.922-.106.248-.283 1.063-1.24 1.346-1.665.283-.425.567-.355.957-.213.39.142 2.479 1.168 2.904 1.381.425.213.709.319.815.5.106.177.106 1.028-.164 1.789z"/></svg>
-        <span class="hidden md:inline font-semibold text-xs md:text-sm pr-1" id="waText">Написать нам</span>
+        <span class="hidden md:inline font-semibold text-xs md:text-sm pr-1" id="waText">მოგვწერეთ</span>
     </a>
 
     <!-- Header -->
@@ -54,21 +54,24 @@
                 <span class="text-[10px] md:text-xs uppercase tracking-widest text-zinc-400 border-l border-zinc-700 pl-2 md:pl-3">Tbilisi</span>
             </div>
             
-            <nav class="hidden md:flex gap-8 text-sm font-medium text-zinc-300">
-                <a href="#services" class="hover:text-roseGold transition" data-en="Services" data-ru="Услуги">Услуги</a>
-                <a href="#studio" class="hover:text-roseGold transition" data-en="Photo Studio" data-ru="Фотостудия">Фотостудия</a>
-                <a href="#classes" class="hover:text-roseGold transition" data-en="Yoga & Pilates" data-ru="Йога и Пилатес">Йога и Пилатес</a>
-                <a href="#location" class="hover:text-roseGold transition" data-en="Location" data-ru="Локация">Локация</a>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-zinc-300">
+                <a href="#about" class="hover:text-roseGold transition" data-ka="ჩვენ შესახებ" data-en="About Us" data-ru="О нас">ჩვენ შესახებ</a>
+                <a href="#services" class="hover:text-roseGold transition" data-ka="სერვისები" data-en="Services" data-ru="Услуги">სერვისები</a>
+                <a href="#whyus" class="hover:text-roseGold transition" data-ka="უპირატესობები" data-en="Why Us" data-ru="Преимущества">უპირატესობები</a>
+                <a href="#faq" class="hover:text-roseGold transition" data-ka="FAQ" data-en="FAQ" data-ru="Частые вопросы">FAQ</a>
+                <a href="#location" class="hover:text-roseGold transition" data-ka="ლოკაცია" data-en="Location" data-ru="Локация">ლოკაცია</a>
             </nav>
 
-            <div class="flex items-center gap-2.5 md:gap-4">
-                <div class="flex items-center bg-zinc-900 p-0.5 rounded-full border border-zinc-800 text-[11px] md:text-xs">
-                    <button onclick="switchLang('ru')" id="btnRu" class="px-2.5 py-1 rounded-full bg-roseGold text-black font-bold transition">RUS</button>
-                    <button onclick="switchLang('en')" id="btnEn" class="px-2.5 py-1 rounded-full text-zinc-400 hover:text-white transition">ENG</button>
+            <div class="flex items-center gap-2 md:gap-3">
+                <!-- 3 Languages Switcher -->
+                <div class="flex items-center bg-zinc-900 p-0.5 rounded-full border border-zinc-800 text-[10px] md:text-xs">
+                    <button onclick="switchLang('ka')" id="btnKa" class="px-2 py-1 rounded-full bg-roseGold text-black font-bold transition">GEO</button>
+                    <button onclick="switchLang('ru')" id="btnRu" class="px-2 py-1 rounded-full text-zinc-400 hover:text-white transition">RUS</button>
+                    <button onclick="switchLang('en')" id="btnEn" class="px-2 py-1 rounded-full text-zinc-400 hover:text-white transition">ENG</button>
                 </div>
 
-                <button onclick="openBooking('Забронировать визит', 0)" class="bg-roseGold text-black font-semibold text-xs md:text-sm px-3.5 py-2 md:px-5 md:py-2.5 rounded-full hover:bg-roseGold-dark transition rose-glow whitespace-nowrap">
-                    <span data-en="Book Visit" data-ru="Забронировать">Забронировать</span>
+                <button onclick="openBooking('ვიზიტის დაჯავშნა', 0)" class="bg-roseGold text-black font-semibold text-xs md:text-sm px-3.5 py-2 md:px-5 md:py-2.5 rounded-full hover:bg-roseGold-dark transition rose-glow whitespace-nowrap">
+                    <span data-ka="დაჯავშნა" data-en="Book Visit" data-ru="Забронировать">დაჯავშნა</span>
                 </button>
             </div>
         </div>
@@ -80,23 +83,26 @@
             <div class="md:col-span-7">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card text-xs text-roseGold mb-4 md:mb-6 border border-roseGold/30">
                     <span>📍</span>
-                    <span class="text-zinc-200">Бери Габриел Салоси 3, Тбилиси</span>
+                    <span class="text-zinc-200" data-ka="ბერი გაბრიელ სალოსის გამზ. 3, თბილისი" data-en="Beri Gabriel Salosi Ave 3, Tbilisi" data-ru="Бери Габриел Салоси 3, Тбилиси">ბერი გაბრიელ სალოსის გამზ. 3, თბილისი</span>
                 </div>
 
                 <h1 class="text-3xl md:text-6xl font-light tracking-tight leading-tight mb-4 md:mb-6">
-                    <span data-en="Create Your Aura at" data-ru="Создай свою ауру в">Создай свою ауру в</span> 
+                    <span data-ka="შექმენი შენი აურა" data-en="Create Your Aura at" data-ru="Создай свою ауру в">შექმენი შენი აურა</span> 
                     <span class="font-semibold text-roseGold">Aura space</span>
                 </h1>
-                <p class="text-zinc-300 text-sm md:text-lg mb-6 md:mb-8 max-w-xl font-light leading-relaxed" data-en="Aesthetic Photo Studio, Yoga, Pilates & Group Workouts in Tbilisi." data-ru="Эстетичная фотостудия, йога, пилатес и групповые тренировки в Тбилиси.">
-                    Эстетичная фотостудия, йога, пилатес и групповые тренировки в Тбилиси.
+                <p class="text-zinc-300 text-sm md:text-lg mb-6 md:mb-8 max-w-xl font-light leading-relaxed" 
+                   data-ka="ესთეტიკური ფოტო-სტუდია, იოგა, პილატესი და ჯგუფური ვარჯიშები თბილისის ცენტრთან ახლოს." 
+                   data-en="Aesthetic Photo Studio, Yoga, Pilates & Group Workouts in Tbilisi." 
+                   data-ru="Эстетичная фотостудия, йога, пилатес и групповые тренировки в Тбилиси.">
+                    ესთეტიკური ფოტო-სტუდია, იოგა, პილატესი და ჯგუფური ვარჯიშები თბილისის ცენტრთან ახლოს.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
-                    <a href="#studio" class="bg-roseGold text-black font-semibold px-6 md:px-8 py-3.5 md:py-4 rounded-full text-center hover:bg-roseGold-dark transition rose-glow text-sm">
-                        <span data-en="Rent Photo Studio" data-ru="Аренда фотостудии">Аренда фотостудии</span>
+                    <a href="#services" class="bg-roseGold text-black font-semibold px-6 md:px-8 py-3.5 md:py-4 rounded-full text-center hover:bg-roseGold-dark transition rose-glow text-sm">
+                        <span data-ka="სტუდიის იჯარა" data-en="Rent Photo Studio" data-ru="Аренда фотостудии">სტუდიის იჯარა</span>
                     </a>
-                    <a href="#classes" class="border border-zinc-700 text-zinc-300 font-medium px-6 md:px-8 py-3.5 md:py-4 rounded-full text-center hover:bg-zinc-800 transition text-sm">
-                        <span data-en="Yoga & Pilates" data-ru="Занятия и Йога">Занятия и Йога</span>
+                    <a href="#services" class="border border-zinc-700 text-zinc-300 font-medium px-6 md:px-8 py-3.5 md:py-4 rounded-full text-center hover:bg-zinc-800 transition text-sm">
+                        <span data-ka="იოგა & პილატესი" data-en="Yoga & Pilates" data-ru="Занятия и Йога">იოგა & პილატესი</span>
                     </a>
                 </div>
             </div>
@@ -105,69 +111,179 @@
             <div class="md:col-span-5">
                 <div class="glass-card p-5 md:p-8 rounded-3xl relative gold-border rose-glow">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="text-[10px] uppercase text-roseGold font-semibold tracking-wider" data-en="Studio & Classes" data-ru="Пространство">Пространство</span>
-                        <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full">Tbilisi Studio</span>
+                        <span class="text-[10px] uppercase text-roseGold font-semibold tracking-wider" data-ka="სივრცე" data-en="Studio & Classes" data-ru="Пространство">სივრცე</span>
+                        <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full">Tbilisi Hub</span>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-1.5" data-en="Book Studio Time or Workout" data-ru="Забронируйте время или урок">Забронируйте время или урок</h3>
-                    <p class="text-xs text-zinc-400 mb-5" data-en="Photo studio rent, yoga flow, pilates, and personal training." data-ru="Аренда фотостудии, йога, пилатес и групповые практики.">Аренда фотостудии, йога, пилатес и групповые практики.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-1.5" data-ka="დაჯავშნეთ დრო ან ვარჯიში" data-en="Book Studio Time or Workout" data-ru="Забронируйте время или урок">დაჯავშნეთ დრო ან ვარჯიში</h3>
+                    <p class="text-xs text-zinc-400 mb-5" data-ka="ფოტო სტუდიის ქირაობა, იოგა, პილატესი და ინდივიდუალური პრაქტიკები." data-en="Photo studio rent, yoga flow, pilates, and personal training." data-ru="Аренда фотостудии, йога, пилатес и групповые практики.">ფოტო სტუდიის ქირაობა, იოგა, პილატესი და ინდივიდუალური პრაქტიკები.</p>
 
-                    <button onclick="openBooking('Бронь пространств Aura space', 0)" class="w-full bg-roseGold text-black font-semibold py-3.5 md:py-4 rounded-xl hover:bg-roseGold-dark transition shadow-lg text-center text-sm">
-                        <span data-en="Reserve Slot Online" data-ru="Забронировать онлайн">Забронировать онлайн</span>
+                    <button onclick="openBooking('Aura space - ჯავშანი', 0)" class="w-full bg-roseGold text-black font-semibold py-3.5 md:py-4 rounded-xl hover:bg-roseGold-dark transition shadow-lg text-center text-sm">
+                        <span data-ka="ონლაინ დაჯავშნა" data-en="Reserve Slot Online" data-ru="Забронировать онлайн">ონლაინ დაჯავშნა</span>
                     </button>
-                    <p class="text-[10px] md:text-[11px] text-center text-zinc-500 mt-2.5">🔒 Мгновенное подтверждение в WhatsApp / Telegram</p>
+                    <p class="text-[10px] md:text-[11px] text-center text-zinc-500 mt-2.5" data-ka="🔒 სწრაფი დადასტურება WhatsApp / Telegram-ში" data-en="🔒 Instant confirmation via WhatsApp / Telegram" data-ru="🔒 Мгновенное подтверждение в WhatsApp / Telegram">🔒 სწრაფი დადასტურება WhatsApp / Telegram-ში</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES / DIRECTIONS SECTION -->
+    <!-- WHY CHOOSE US SECTION -->
+    <section id="whyus" class="py-16 md:py-20 px-4 md:px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-xs uppercase tracking-widest text-roseGold font-semibold" data-ka="რატომ Aura Space?" data-en="Why Aura Space?" data-ru="Почему Aura Space?">რატომ Aura Space?</span>
+            <h2 class="text-2xl md:text-4xl font-light mt-1" data-ka="რატომ ირჩევენ ჩვენს სტუდიას" data-en="Why Clients Choose Us" data-ru="Почему выбирают нашу студию">რატომ ირჩევენ ჩვენს სტუდიას</h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition">
+                <div class="text-roseGold text-3xl mb-3">✨</div>
+                <h3 class="font-bold text-lg mb-2" data-ka="ესთეტიკური ინტერიერი" data-en="Aesthetic Design" data-ru="Эстетичный дизайн">ესთეტიკური ინტერიერი</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed" data-ka="დახვეწილი დიზაინი, ბუნებრივი სინათლე და პრემიუმ ატმოსფერო იდეალური ფოტოებისა და მყუდრო ვარჯიშისთვის." data-en="Refined design, natural light, and premium atmosphere perfect for shoots and cozy workouts." data-ru="Изысканный дизайн, естественный свет и премиальная атмосфера для съемок и комфортных тренировок.">დახვეწილი დიზაინი, ბუნებრივი სინათლე და პრემიუმ ატმოსფერო იდეალური ფოტოებისა და მყუდრო ვარჯიშისთვის.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition">
+                <div class="text-roseGold text-3xl mb-3">🧘‍♀️</div>
+                <h3 class="font-bold text-lg mb-2" data-ka="მცირე ჯგუფები" data-en="Small Groups" data-ru="Камерные группы">მცირე ჯგუფები</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed" data-ka="ინდივიდუალური ყურადღება თითოეულ სტუმარს. ჩვენთან არ არის გადატვირთული დარბაზები." data-en="Individual attention to every guest. No overcrowded workout rooms." data-ru="Индивидуальное внимание к каждому гостю. Никаких переполненных залов.">ინდივიდუალური ყურადღება თითოეულ სტუმარს. ჩვენთან არ არის გადატვირთული დარბაზები.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition">
+                <div class="text-roseGold text-3xl mb-3">📸</div>
+                <h3 class="font-bold text-lg mb-2" data-ka="პროფესიონალური განათება" data-en="Pro Lighting" data-ru="Проф. Свет">პროფესიონალური განათება</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed" data-ka="სტუდია აღჭურვილია თანამედროვე განათებითა და რეკვიზიტებით ნებისმიერი სირთულის გადაღებისთვის." data-en="Studio equipped with top lighting and props for content creators and photographers." data-ru="Студия оснащена современным светом и реквизитом для съемок любой сложности.">სტუდია აღჭურვილია თანამედროვე განათებითა და რეკვიზიტებით ნებისმიერი სირთულის გადაღებისთვის.</p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition">
+                <div class="text-roseGold text-3xl mb-3">🤝</div>
+                <h3 class="font-bold text-lg mb-2" data-ka="მრავალენოვანი სერვისი" data-en="Multilingual Support" data-ru="Мультиязычность">მრავალენოვანი სერვისი</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed" data-ka="ჩვენ ვსაუბრობთ ქართულ, ინგლისურ და რუსულ ენებზე. მარტივი კომუნიკაცია და ჯავშანი." data-en="We speak Georgian, English, and Russian. Easy booking and communication." data-ru="Мы говорим на грузинском, английском и русском языках. Простая бронь и сервис.">ჩვენ ვსაუბრობთ ქართულ, ინგლისურ და რუსულ ენებზე. მარტივი კომუნიკაცია და ჯავშანი.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES & PRICES SECTION -->
     <section id="services" class="py-16 md:py-20 px-4 md:px-6 max-w-6xl mx-auto">
         <div class="text-center mb-10 md:mb-12">
-            <span class="text-xs uppercase tracking-widest text-roseGold font-semibold" data-en="Our Directions" data-ru="Направления">Направления</span>
-            <h2 class="text-2xl md:text-3xl font-light mt-1" data-en="What We Offer at Aura space" data-ru="Что есть в Aura space">Что есть в Aura space</h2>
+            <span class="text-xs uppercase tracking-widest text-roseGold font-semibold" data-ka="მიმართულებები & ფასები" data-en="Services & Pricing" data-ru="Направления и Цены">მიმართულებები & ფასები</span>
+            <h2 class="text-2xl md:text-3xl font-light mt-1" data-ka="რას გთავაზობთ Aura Space-ში" data-en="Services Available at Aura Space" data-ru="Что есть в Aura space">რას გთავაზობთ Aura Space-ში</h2>
         </div>
 
         <div class="grid md:grid-cols-3 gap-5 md:gap-6">
-            <!-- Direction 1: Photo Studio -->
-            <div id="studio" class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition">
-                <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=800');">
-                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30">Фотостудия</span>
+            <!-- Service 1: Photo Studio -->
+            <div class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition flex flex-col justify-between">
+                <div>
+                    <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=800');">
+                        <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30" data-ka="ფოტო-სტუდია" data-en="Photo Studio" data-ru="Фотостудия">ფოტო-სტუდია</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-base md:text-lg mb-1" data-ka="ფოტო-სტუდიის იჯარა" data-en="Photo Studio Rental" data-ru="Аренда фотостудии">ფოტო-სტუდიის იჯარა</h3>
+                        <p class="text-xs text-zinc-400 mb-4" data-ka="ნათელი სივრცე, ესთეტიკური დეკორი, პროფესიონალური სინათლე პერსონალური და ბრენდ-გადაღებებისთვის." data-en="Ideal light, stylish interior, and props for personal and commercial shoots." data-ru="Светлое пространство, эстетичный интерьер для съемок и контента.">ნათელი სივრცე, ესთეტიკური დეკორი, პროფესიონალური სინათლე პერსონალური და ბრენდ-გადაღებებისთვის.</p>
+                        <div class="border-t border-zinc-800 pt-3 mb-4">
+                            <span class="text-xs text-zinc-400" data-ka="ფასი:" data-en="Price:" data-ru="Цена:">ფასი:</span>
+                            <span class="text-roseGold font-bold text-base ml-2">60 GEL / საათი</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-5">
-                    <h3 class="font-bold text-base md:text-lg mb-1" data-en="Aesthetic Photo Studio" data-ru="Аренда фотостудии">Аренда фотостудии</h3>
-                    <p class="text-xs text-zinc-400 mb-4" data-en="Ideal light, stylish interior, and props for personal and commercial shoots." data-ru="Светлое пространство, эстетичный интерьер для съемок и контента.">Светлое пространство, эстетичный интерьер для съемок и контента.</p>
-                    <button onclick="openBooking('Аренда Фотостудии', 0)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
-                        <span data-en="Book Photo Studio" data-ru="Забронировать съемку">Забронировать съемку</span>
+                <div class="p-5 pt-0">
+                    <button onclick="openBooking('ფოტო-სტუდიის იჯარა', 60)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
+                        <span data-ka="სტუდიის დაჯავშნა" data-en="Book Studio" data-ru="Забронировать съемку">სტუდიის დაჯავშნა</span>
                     </button>
                 </div>
             </div>
 
-            <!-- Direction 2: Yoga & Pilates -->
-            <div id="classes" class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition">
-                <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=800');">
-                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30">Йога и Пилатес</span>
+            <!-- Service 2: Yoga & Pilates -->
+            <div class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition flex flex-col justify-between">
+                <div>
+                    <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=800');">
+                        <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30" data-ka="იოგა & პილატესი" data-en="Yoga & Pilates" data-ru="Йога и Пилатес">იოგა & პილატესი</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-base md:text-lg mb-1" data-ka="იოგა და პილატესი" data-en="Yoga & Pilates Classes" data-ru="Йога и Пилатес">იოგა და პილატესი</h3>
+                        <p class="text-xs text-zinc-400 mb-4" data-ka="რბილი სხეულებრივი პრაქტიკები, ტანდეგობის გაუმჯობესება და სტრესის მოხსნა." data-en="Soft body practice, posture correction, and mental relax." data-ru="Мягкие практики для гибкости, осанки и гармонии тела.">რბილი სხეულებრივი პრაქტიკები, ტანდეგობის გაუმჯობესება და სტრესის მოხსნა.</p>
+                        <div class="border-t border-zinc-800 pt-3 mb-4">
+                            <span class="text-xs text-zinc-400" data-ka="ერთჯერადი:" data-en="Single Class:" data-ru="Разовое:">ერთჯერადი:</span>
+                            <span class="text-roseGold font-bold text-base ml-2">35 GEL</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-5">
-                    <h3 class="font-bold text-base md:text-lg mb-1" data-en="Yoga & Pilates" data-ru="Йога и Пилатес">Йога и Пилатес</h3>
-                    <p class="text-xs text-zinc-400 mb-4" data-en="Soft body practice, posture correction, and mental relax." data-ru="Мягкие практики для гибкости, осанки и гармонии тела.">Мягкие практики для гибкости, осанки и гармонии тела.</p>
-                    <button onclick="openBooking('Занятие Йога/Пилатес', 0)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
-                        <span data-en="Book Practice" data-ru="Записаться на урок">Записаться на урок</span>
+                <div class="p-5 pt-0">
+                    <button onclick="openBooking('იოგა / პილატესი', 35)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
+                        <span data-ka="ვარჯიშზე ჩაწერა" data-en="Book Class" data-ru="Записаться на урок">ვარჯიშზე ჩაწერა</span>
                     </button>
                 </div>
             </div>
 
-            <!-- Direction 3: Group Training -->
-            <div class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition">
-                <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800');">
-                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30">Групповые практики</span>
+            <!-- Service 3: Group Workouts -->
+            <div class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition flex flex-col justify-between">
+                <div>
+                    <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800');">
+                        <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30" data-ka="ჯგუფური პრაქტიკები" data-en="Group Fitness" data-ru="Групповые практики">ჯგუფური პრაქტიკები</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-base md:text-lg mb-1" data-ka="ჯგუფური ვარჯიშები" data-en="Group Workouts" data-ru="Групповые тренировки">ჯგუფური ვარჯიშები</h3>
+                        <p class="text-xs text-zinc-400 mb-4" data-ka="მცირე მყუდრო ჯგუფები ტონუსის გასაუმჯობესებლად და ენერგიით დასამუხტად." data-en="Small groups for effective fitness and personal guidance." data-ru="Уютные группы для эффективных тренировок и тонуса.">მცირე მყუდრო ჯგუფები ტონუსის გასაუმჯობესებლად და ენერგიით დასამუხტად.</p>
+                        <div class="border-t border-zinc-800 pt-3 mb-4">
+                            <span class="text-xs text-zinc-400" data-ka="აბონემენტი (8 გაკვეთილი):" data-en="Pass (8 sessions):" data-ru="Абонемент (8 занятий):">აბონემენტი (8 გაკვეთილი):</span>
+                            <span class="text-roseGold font-bold text-base ml-2">220 GEL</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-5">
-                    <h3 class="font-bold text-base md:text-lg mb-1" data-en="Group Classes" data-ru="Групповые тренировки">Групповые тренировки</h3>
-                    <p class="text-xs text-zinc-400 mb-4" data-en="Small groups for effective fitness and personal guidance." data-ru="Уютные группы для эффективных тренировок და тонуса.">Уютные группы для эффективных тренировок და тонуса.</p>
-                    <button onclick="openBooking('Групповая тренировка', 0)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
-                        <span data-en="Join Group" data-ru="Записаться в группу">Записаться в группу</span>
+                <div class="p-5 pt-0">
+                    <button onclick="openBooking('ჯგუფური ვარჯიში', 220)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
+                        <span data-ka="ჯგუფში ჩაწერა" data-en="Join Group" data-ru="Записаться в группу">ჯგუფში ჩაწერა</span>
                     </button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-16 md:py-20 px-4 md:px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-10">
+            <span class="text-xs uppercase tracking-widest text-roseGold font-semibold" data-ka="კითხვა-პასუხი" data-en="Questions & Answers" data-ru="Вопросы и ответы">კითხვა-პასუხი</span>
+            <h2 class="text-2xl md:text-3xl font-light mt-1" data-ka="ხშირად დასმული კითხვები" data-en="Frequently Asked Questions" data-ru="Часто задаваемые вопросы">ხშირად დასმული კითხვები</h2>
+        </div>
+
+        <div class="space-y-4">
+            <div class="glass-card p-5 rounded-2xl border-zinc-800">
+                <h3 class="font-semibold text-sm md:text-base text-roseGold mb-2" 
+                    data-ka="1. როგორ დავჯავშნო ფოტო-სტუდია ან ვარჯიში?" 
+                    data-en="1. How to book a photo studio or class?" 
+                    data-ru="1. Как забронировать фотостудию или урок?">
+                    1. როგორ დავჯავშნო ფოტო-სტუდია ან ვარჯიში?
+                </h3>
+                <p class="text-xs md:text-sm text-zinc-300 font-light" 
+                   data-ka="დააჭირეთ ღილაკს 'დაჯავშნა', შეავსეთ სახელი და ტელეფონი, ან პირდაპირ მოგვწერეთ WhatsApp / Telegram-ში. ადმინისტრატორი გიპასუხებთ 10 წუთში." 
+                   data-en="Click 'Book Visit', enter your name and phone, or text us via WhatsApp/Telegram directly. Our team responds within 10 mins." 
+                   data-ru="Нажмите кнопку 'Забронировать', оставьте имя и телефон или напишите нам прямо в WhatsApp / Telegram.">
+                    დააჭირეთ ღილაკს 'დაჯავშნა', შეავსეთ სახელი და ტელეფონი, ან პირდაპირ მოგვწერეთ WhatsApp / Telegram-ში. ადმინისტრატორი გიპასუხებთ 10 წუთში.
+                </p>
+            </div>
+
+            <div class="glass-card p-5 rounded-2xl border-zinc-800">
+                <h3 class="font-semibold text-sm md:text-base text-roseGold mb-2" 
+                    data-ka="2. გჭირდებათ თუ არა საკუთარი ხალიჩა (Mat) იოგასთვის?" 
+                    data-en="2. Do I need to bring my own yoga mat?" 
+                    data-ru="2. Нужно ли брать свой коврик для йоги?">
+                    2. გჭირდებათ თუ არა საკუთარი ხალიჩა (Mat) იოგასთვის?
+                </h3>
+                <p class="text-xs md:text-sm text-zinc-300 font-light" 
+                   data-ka="არა, Aura Space უზრუნველყოფს ყველა საჭირო ინვენტარს: ხალიჩებს, ბლოკებს, ბალიშებსა და წყალს." 
+                   data-en="No, Aura Space provides all necessary equipment including mats, blocks, straps, and drinking water." 
+                   data-ru="Нет, Aura Space предоставляет все необходимый инвентарь: коврики, блоки, ремни и питьевую воду.">
+                    არა, Aura Space უზრუნველყოფს ყველა საჭირო ინვენტარს: ხალიჩებს, ბლოკებს, ბალიშებსა და წყალს.
+                </p>
+            </div>
+
+            <div class="glass-card p-5 rounded-2xl border-zinc-800">
+                <h3 class="font-semibold text-sm md:text-base text-roseGold mb-2" 
+                    data-ka="3. რა აღჭურვილობაა ფოტო-სტუდიაში?" 
+                    data-en="3. What equipment is in the photo studio?" 
+                    data-ru="3. Какое оборудование есть в фотостудии?">
+                    3. რა აღჭურვილობაა ფოტო-სტუდიაში?
+                </h3>
+                <p class="text-xs md:text-sm text-zinc-300 font-light" 
+                   data-ka="სტუდიაში არის პროფესიონალური განათება, ფონები, ესთეტიკური ავეჯი და სარკეები კონტენტ-მექერებისთვის." 
+                   data-en="The studio features softbox lighting, aesthetic interior items, backdrops, and large mirrors for photoshoots." 
+                   data-ru="В студии есть профессиональный импульсный/постоянный свет, эстетичный интерьер, фоны и зеркала.">
+                    სტუდიაში არის პროფესიონალური განათება, ფონები, ესთეტიკური ავეჯი და სარკეები კონტენტ-მექერებისთვის.
+                </p>
             </div>
         </div>
     </section>
@@ -176,12 +292,12 @@
     <section id="location" class="py-12 md:py-16 px-4 md:px-6 bg-zinc-900/40 border-y border-zinc-800/80">
         <div class="max-w-4xl mx-auto glass-card p-6 md:p-8 rounded-3xl border border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
-                <span class="text-xs uppercase text-roseGold font-semibold">Location</span>
-                <h3 class="text-xl md:text-2xl font-light mt-1">Ждем вас в Aura space</h3>
-                <p class="text-xs text-zinc-400 mt-1">Тбилиси, ул. Бери Габриел Салоси 3</p>
+                <span class="text-xs uppercase text-roseGold font-semibold" data-ka="ლოკაცია" data-en="Location" data-ru="Локация">ლოკაცია</span>
+                <h3 class="text-xl md:text-2xl font-light mt-1" data-ka="გელოდებით Aura Space-ში" data-en="We are waiting for you at Aura space" data-ru="Ждем вас в Aura space">გელოდებით Aura Space-ში</h3>
+                <p class="text-xs text-zinc-400 mt-1" data-ka="თბილისი, ბერი გაბრიელ სალოსის გამზირი 3" data-en="3 Beri Gabriel Salosi Ave, Tbilisi" data-ru="Тбилиси, ул. Бери Габриел Салоси 3">თბილისი, ბერი გაბრიელ სალოსის გამზირი 3</p>
             </div>
-            <button onclick="openBooking('Консультация / Визит', 0)" class="w-full md:w-auto bg-roseGold text-black px-6 py-3 rounded-xl font-semibold text-xs hover:bg-roseGold-dark transition text-center">
-                Задать вопрос / Записаться
+            <button onclick="openBooking('კონსულტაცია / ვიზიტი', 0)" class="w-full md:w-auto bg-roseGold text-black px-6 py-3 rounded-xl font-semibold text-xs hover:bg-roseGold-dark transition text-center">
+                <span data-ka="კითხვის დასმა / ჩაწერა" data-en="Ask Question / Book" data-ru="Задать вопрос / Записаться">კითხვის დასმა / ჩაწერა</span>
             </button>
         </div>
     </section>
@@ -191,48 +307,56 @@
         <div class="glass-card max-w-md w-full p-5 md:p-8 rounded-3xl relative gold-border">
             <button onclick="closeBooking()" class="absolute top-4 right-4 text-zinc-400 hover:text-white text-xl">✕</button>
             
-            <h3 class="text-lg md:text-xl font-bold text-roseGold mb-1" id="modalTitle">Бронирование в Aura space</h3>
-            <p class="text-xs text-zinc-400 mb-5">Оставьте контакты — администратор ответит в течение 10 минут.</p>
+            <h3 class="text-lg md:text-xl font-bold text-roseGold mb-1" id="modalTitle">დაჯავშნა Aura space-ში</h3>
+            <p class="text-xs text-zinc-400 mb-5" data-ka="დატოვეთ საკონტაქტო მონაცემები — ადმინისტრატორი მოგწერთ 10 წუთში." data-en="Leave your details - manager will reply within 10 mins." data-ru="Оставьте контакты — администратор ответит в течение 10 минут.">დატოვეთ საკონტაქტო მონაცემები — ადმინისტრატორი მოგწერთ 10 წუთში.</p>
 
             <form onsubmit="submitBooking(event)" class="space-y-3.5">
                 <input type="hidden" id="modalService" value="">
                 
                 <div>
-                    <label class="block text-xs text-zinc-400 mb-1">Ваше Имя</label>
-                    <input type="text" id="modalName" required placeholder="Анна" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-2.5 md:py-3 text-sm text-white focus:outline-none focus:border-roseGold">
+                    <label class="block text-xs text-zinc-400 mb-1" data-ka="თქვენი სახელი" data-en="Your Name" data-ru="Ваше Имя">თქვენი სახელი</label>
+                    <input type="text" id="modalName" required placeholder="ანა" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-2.5 md:py-3 text-sm text-white focus:outline-none focus:border-roseGold">
                 </div>
                 <div>
-                    <label class="block text-xs text-zinc-400 mb-1">Телефон / WhatsApp / Telegram</label>
+                    <label class="block text-xs text-zinc-400 mb-1" data-ka="ტელეფონი / WhatsApp / Telegram" data-en="Phone / WhatsApp / Telegram" data-ru="Телефон / WhatsApp / Telegram">ტელეფონი / WhatsApp / Telegram</label>
                     <input type="tel" id="modalPhone" required placeholder="+995 ..." class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-2.5 md:py-3 text-sm text-white focus:outline-none focus:border-roseGold">
                 </div>
 
                 <button type="submit" class="w-full bg-roseGold text-black font-semibold py-3.5 rounded-xl hover:bg-roseGold-dark transition mt-2 text-xs md:text-sm">
-                    Подтвердить и отправить
+                    <span data-ka="დადასტურება და გაგზავნა" data-en="Confirm & Send" data-ru="Подтвердить и отправить">დადასტურება და გაგზავნა</span>
                 </button>
             </form>
         </div>
     </div>
 
     <script>
-        let currentLang = 'ru';
+        let currentLang = 'ka';
 
         function switchLang(lang) {
             currentLang = lang;
-            document.querySelectorAll('[data-en]').forEach(el => {
-                el.innerText = el.getAttribute(`data-${lang}`);
+            document.querySelectorAll('[data-ka]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) el.innerText = text;
             });
-            if(lang === 'en') {
-                document.getElementById('btnEn').className = "px-2.5 py-1 rounded-full bg-roseGold text-black font-bold transition";
-                document.getElementById('btnRu').className = "px-2.5 py-1 rounded-full text-zinc-400 hover:text-white transition";
+
+            // Reset tab styles
+            document.getElementById('btnKa').className = "px-2 py-1 rounded-full text-zinc-400 hover:text-white transition";
+            document.getElementById('btnRu').className = "px-2 py-1 rounded-full text-zinc-400 hover:text-white transition";
+            document.getElementById('btnEn').className = "px-2 py-1 rounded-full text-zinc-400 hover:text-white transition";
+
+            if (lang === 'en') {
+                document.getElementById('btnEn').className = "px-2 py-1 rounded-full bg-roseGold text-black font-bold transition";
                 document.getElementById('waText').innerText = "Chat with us";
-            } else {
-                document.getElementById('btnRu').className = "px-2.5 py-1 rounded-full bg-roseGold text-black font-bold transition";
-                document.getElementById('btnEn').className = "px-2.5 py-1 rounded-full text-zinc-400 hover:text-white transition";
+            } else if (lang === 'ru') {
+                document.getElementById('btnRu').className = "px-2 py-1 rounded-full bg-roseGold text-black font-bold transition";
                 document.getElementById('waText').innerText = "Написать нам";
+            } else {
+                document.getElementById('btnKa').className = "px-2 py-1 rounded-full bg-roseGold text-black font-bold transition";
+                document.getElementById('waText').innerText = "მოგვწერეთ";
             }
         }
 
-        function openBooking(serviceName) {
+        function openBooking(serviceName, price) {
             document.getElementById('modalService').value = serviceName;
             document.getElementById('modalTitle').innerText = serviceName;
             document.getElementById('bookingModal').classList.remove('hidden');
@@ -248,13 +372,13 @@
             const name = document.getElementById('modalName').value;
             const phone = document.getElementById('modalPhone').value;
             
-            const text = `Заявка с сайта Aura space!\nНаправление: ${service}\nИмя: ${name}\nТелефон: ${phone}`;
+            const text = `Aura Space Booking Request:\nService: ${service}\nName: ${name}\nPhone: ${phone}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
             closeBooking();
         }
 
         window.onload = function() {
-            switchLang('ru');
+            switchLang('ka');
         };
     </script>
 </body>
