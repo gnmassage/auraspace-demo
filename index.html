@@ -12,7 +12,7 @@
                 extend: {
                     colors: {
                         roseGold: { DEFAULT: '#E8B4B8', dark: '#C98A90', light: '#FDF6F6' },
-                        seaAura: { DEFAULT: '#3A7D8C', light: '#EBF4F6' },
+                        goldAccent: '#D4AF37',
                         bgDark: '#0D0D0E',
                         cardDark: '#161618'
                     },
@@ -23,10 +23,11 @@
     </script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0D0D0E; color: #FDF6F6; }
-        .glass-card { background: rgba(22, 22, 24, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(232, 180, 184, 0.2); }
+        .glass-card { background: rgba(22, 22, 24, 0.82); backdrop-filter: blur(16px); border: 1px solid rgba(232, 180, 184, 0.2); }
+        .glass-card-featured { background: rgba(30, 25, 28, 0.9); backdrop-filter: blur(20px); border: 1px solid rgba(232, 180, 184, 0.6); }
         .rose-glow { box-shadow: 0 0 30px rgba(232, 180, 184, 0.25); }
         .hero-bg {
-            background: linear-gradient(to bottom, rgba(13, 13, 14, 0.7), rgba(13, 13, 14, 0.95)), 
+            background: linear-gradient(to bottom, rgba(13, 13, 14, 0.75), rgba(13, 13, 14, 0.95)), 
                         url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=1920');
             background-size: cover;
             background-position: center;
@@ -57,8 +58,8 @@
             
             <nav class="hidden md:flex gap-6 text-sm font-medium text-zinc-300">
                 <a href="#about" class="hover:text-roseGold transition" data-ka="ჩვენ შესახებ" data-en="About Us" data-ru="О нас">ჩვენ შესახებ</a>
-                <a href="#services" class="hover:text-roseGold transition" data-ka="სერვისები" data-en="Services" data-ru="Услуги">სერვისები</a>
-                <a href="#whyus" class="hover:text-roseGold transition" data-ka="უპირატესობები" data-en="Why Us" data-ru="Преимущества">უპირატესობები</a>
+                <a href="#offers" class="hover:text-roseGold transition" data-ka="შეთავაზებები" data-en="Special Offers" data-ru="Предложения">შეთავაზებები</a>
+                <a href="#pricing" class="hover:text-roseGold transition" data-ka="ფასები & პაკეტები" data-en="Pricing & Packages" data-ru="Цены и Пакеты">ფასები & პაკეტები</a>
                 <a href="#faq" class="hover:text-roseGold transition" data-ka="FAQ" data-en="FAQ" data-ru="Частые вопросы">FAQ</a>
                 <a href="#location" class="hover:text-roseGold transition" data-ka="ლოკაცია" data-en="Location" data-ru="Локация">ლოკაცია</a>
             </nav>
@@ -88,148 +89,254 @@
                 </div>
 
                 <h1 class="text-3xl md:text-6xl font-light tracking-tight leading-tight mb-4 md:mb-6">
-                    <span data-ka="შეიგრძენი ჰარმონია" data-en="Find Your Inner Balance at" data-ru="Обретите гармонию в">შეიგრძენი ჰარმონია</span> 
+                    <span data-ka="შეიგრძენი ჰარმონია" data-en="Find Your Balance at" data-ru="Обретите гармонию в">შეიგრძენი ჰარმონია</span> 
                     <span class="font-semibold text-roseGold">Aura space Batumi</span>
                 </h1>
                 <p class="text-zinc-300 text-sm md:text-lg mb-6 md:mb-8 max-w-xl font-light leading-relaxed" 
-                   data-ka="ბათუმის ყველაზე ატმოსფერული სივრცე: იოგა, პილატესი, გაწელვები და ესთეტიკური ფოტო-სტუდია შავი ზღვის პირას." 
-                   data-en="Batumi's most atmospheric wellness space: Yoga, Pilates, Stretching & Aesthetic Photo Studio by the Black Sea." 
-                   data-ru="Самое атмосферное пространство Батуми: йога, пилатес, стретчинг и эстетичная фотостудия у моря.">
-                    ბათუმის ყველაზე ატმოსფერული სივრცე: იოგა, პილატესი, გაწელვები და ესთეტიკური ფოტო-სტუდია შავი ზღვის პირას.
+                   data-ka="ესთეტიკური სივრცე ბათუმის ცენტრში: იოგა, პილატესი, გაწელვები, კონტენტ-გადაღებები და მყუდრო საზოგადოება." 
+                   data-en="Aesthetic space in central Batumi: Yoga, Pilates, Stretching, Content Shooting & Cozy Community." 
+                   data-ru="Эстетичное пространство в центре Батуми: йога, пилатес, стретчинг, контент-съемки и уютное комьюнити.">
+                    ესთეტიკური სივრცე ბათუმის ცენტრში: იოგა, პილატესი, გაწელვები, კონტენტ-გადაღებები და მყუდრო საზოგადოება.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
-                    <a href="#services" class="bg-roseGold text-black font-semibold px-6 md:px-8 py-3.5 md:py-4 rounded-full text-center hover:bg-roseGold-dark transition rose-glow text-sm">
-                        <span data-ka="იოგა & პილატესი" data-en="Yoga & Pilates" data-ru="Йога и Пилатес">იოგა & პილატესი</span>
+                    <a href="#offers" class="bg-roseGold text-black font-semibold px-6 md:px-8 py-3.5 md:py-4 rounded-full text-center hover:bg-roseGold-dark transition rose-glow text-sm">
+                        <span data-ka="სპეც-შეთავაზებები" data-en="Special Offers" data-ru="Спец-предложения">სპეც-შეთავაზებები</span>
                     </a>
-                    <a href="#services" class="border border-zinc-700 text-zinc-300 font-medium px-6 md:px-8 py-3.5 md:py-4 rounded-full text-center hover:bg-zinc-800 transition text-sm">
-                        <span data-ka="ფოტო სტუდიის ქირაობა" data-en="Photo Studio Rent" data-ru="Аренда фотостудии">ფოტო სტუდიის ქირაობა</span>
+                    <a href="#pricing" class="border border-zinc-700 text-zinc-300 font-medium px-6 md:px-8 py-3.5 md:py-4 rounded-full text-center hover:bg-zinc-800 transition text-sm">
+                        <span data-ka="ფასები & აბონემენტები" data-en="Pricing & Passes" data-ru="Цены и Абонементы">ფასები & აბონემენტები</span>
                     </a>
                 </div>
             </div>
 
             <!-- Instant Booking Card -->
             <div class="md:col-span-5">
-                <div class="glass-card p-5 md:p-8 rounded-3xl relative gold-border rose-glow">
+                <div class="glass-card-featured p-5 md:p-8 rounded-3xl relative gold-border rose-glow">
                     <div class="flex justify-between items-center mb-3">
-                        <span class="text-[10px] uppercase text-roseGold font-semibold tracking-wider" data-ka="ბათუმის სივრცე" data-en="Batumi Space" data-ru="Пространство в Батуми">ბათუმის სივრცე</span>
-                        <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full">Khimshiashvili 17</span>
+                        <span class="text-[10px] uppercase text-roseGold font-semibold tracking-wider" data-ka="🔥 პოპულარული" data-en="🔥 Popular" data-ru="🔥 Популярное">🔥 პოპულარული</span>
+                        <span class="text-[10px] bg-roseGold/20 text-roseGold px-2.5 py-0.5 rounded-full font-bold">First Class Offer</span>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-1.5" data-ka="ჩაეწერე ვარჯიშზე ან ფოტოსესიაზე" data-en="Book Class or Photo Shoot" data-ru="Запишитесь на занятие или съемку">ჩაეწერე ვარჯიშზე ან ფოტოსესიაზე</h3>
-                    <p class="text-xs text-zinc-400 mb-5" data-ka="იოგას პრაქტიკები, პილატესი, ინდივიდუალური ვარჯიშები და კონტენტ-გადაღება." data-en="Yoga flow, pilates classes, personal training and aesthetic photo sessions." data-ru="Практики йоги, пилатес, персональные тренировки и контент-съемки.">იოგას პრაქტიკები, პილატესი, ინდივიდუალური ვარჯიშები და კონტენტ-გადაღება.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-1.5" data-ka="პირველი საცდელი ვარჯიში" data-en="First Trial Class" data-ru="Первое пробное занятие">პირველი საცდელი ვარჯიში</h3>
+                    <p class="text-xs text-zinc-300 mb-4" data-ka="გაიცანით ჩვენი ინსტრუქტორები და ატმოსფერო სპეციალურ ფასად — მხოლოდ 20 GEL (30 GEL-ის ნაცვლად)." data-en="Try our yoga or pilates session at a special price — only 20 GEL (instead of 30 GEL)." data-ru="Познакомьтесь с нашими практиками по специальной цене — всего 20 GEL (вместо 30 GEL).">გაიცანით ჩვენი ინსტრუქტორები და ატმოსფერო სპეციალურ ფასად — მხოლოდ 20 GEL (30 GEL-ის ნაცვლად).</p>
 
-                    <button onclick="openBooking('Aura space Batumi - ჯავშანი', 0)" class="w-full bg-roseGold text-black font-semibold py-3.5 md:py-4 rounded-xl hover:bg-roseGold-dark transition shadow-lg text-center text-sm">
-                        <span data-ka="მყისიერი ონლაინ ჯავშანი" data-en="Instant Online Booking" data-ru="Мгновенная бронь">მყისიერი ონლაინ ჯავშანი</span>
+                    <div class="flex justify-between items-center mb-5 bg-zinc-900/80 p-3 rounded-xl border border-zinc-800">
+                        <span class="text-xs text-zinc-400" data-ka="სპეც-ფასი:" data-en="Special Price:" data-ru="Спец-цена:">სპეც-ფასი:</span>
+                        <div class="text-right">
+                            <span class="line-through text-xs text-zinc-500 mr-1.5">30 GEL</span>
+                            <span class="text-roseGold font-bold text-lg">20 GEL</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openBooking('პირველი საცდელი ვარჯიში (20 GEL)', 20)" class="w-full bg-roseGold text-black font-semibold py-3.5 md:py-4 rounded-xl hover:bg-roseGold-dark transition shadow-lg text-center text-sm">
+                        <span data-ka="ჩაეწერე საცდელ ვარჯიშზე" data-en="Book Trial Class" data-ru="Записаться на пробное">ჩაეწერე საცდელ ვარჯიშზე</span>
                     </button>
-                    <p class="text-[10px] md:text-[11px] text-center text-zinc-500 mt-2.5" data-ka="🔒 სწრაფი დადასტურება WhatsApp / Instagram Direct-ით" data-en="🔒 Fast confirmation via WhatsApp / Instagram Direct" data-ru="🔒 Быстрое подтверждение в WhatsApp / Instagram Direct">🔒 სწრაფი დადასტურება WhatsApp / Instagram Direct-ით</p>
+                    <p class="text-[10px] md:text-[11px] text-center text-zinc-400 mt-2.5" data-ka="🔒 ადგილი იჯავშნება WhatsApp-ის საშუალებით" data-en="🔒 Book instantly via WhatsApp" data-ru="🔒 Мгновенная бронь через WhatsApp">🔒 ადგილი იჯავშნება WhatsApp-ის საშუალებით</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHY CHOOSE AURA SPACE BATUMI -->
-    <section id="whyus" class="py-16 md:py-20 px-4 md:px-6 max-w-6xl mx-auto">
+    <!-- INSTAGRAM SPECIAL OFFERS SECTION -->
+    <section id="offers" class="py-16 md:py-20 px-4 md:px-6 max-w-6xl mx-auto">
         <div class="text-center mb-12">
-            <span class="text-xs uppercase tracking-widest text-roseGold font-semibold" data-ka="რატომ Aura Space Batumi?" data-en="Why Aura Space Batumi?" data-ru="Почему Aura Space Batumi?">რატომ Aura Space Batumi?</span>
-            <h2 class="text-2xl md:text-4xl font-light mt-1" data-ka="რატომ ირჩევენ ჩვენს სტუდიას ბათუმში" data-en="Why Everyone Loves Our Studio" data-ru="Почему выбирают нашу студию">რატომ ირჩევენ ჩვენს სტუდიას ბათუმში</h2>
+            <span class="text-xs uppercase tracking-widest text-roseGold font-semibold" data-ka="Instagram Specials" data-en="Instagram Specials" data-ru="Спец-акции из Instagram">Instagram Specials</span>
+            <h2 class="text-2xl md:text-4xl font-light mt-1" data-ka="ტოპ შეთავაზებები & პაკეტები" data-en="Featured Bundles & Promo Offers" data-ru="Горячие предложения и Пაკеты">ტოპ შეთავაზებები & პაკეტები</h2>
         </div>
 
-        <div class="grid md:grid-cols-4 gap-6">
-            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition">
-                <div class="text-roseGold text-3xl mb-3">🌊</div>
-                <h3 class="font-bold text-lg mb-2" data-ka="ბათუმური აურა" data-en="Coastal Vibe" data-ru="Атмосфера Батуми">ბათუმური აურა</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed" data-ka="ზღვისპირა ქალაქის მშვიდი ენერგეტიკა, ნათელი დარბაზი და მყუდრო გარემო სრული რელაქსისთვის." data-en="Cozy atmosphere right in Batumi, perfect light and warm community for total relaxation." data-ru="Уютная атмосфера прямо в Батуми, идеальный свет и тёплое комьюнити для расслабления.">ზღვისპირა ქალაქის მშვიდი ენერგეტიკა, ნათელი დარბაზი და მყუდრო გარემო სრული რელაქსისთვის.</p>
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Offer 1: Split Pass -->
+            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-2xl">👯‍♀️</span>
+                        <span class="bg-roseGold/20 text-roseGold text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Best Value</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2" data-ka="„Bring a Friend“ 2-კაციანი აბონემენტი" data-en="Bring a Friend 2-Person Pass" data-ru="Абонемент «Приходи с подругой»">„Bring a Friend“ 2-კაციანი აბონემენტი</h3>
+                    <p class="text-xs text-zinc-400 mb-4 leading-relaxed" data-ka="იარეთ ვარჯიშებზე მეგობართან ერთად! 8-ვიზიტიანი აბონემენტი იყოფა ორზე — მეტი მოტივაცია და უკეთესი ფასი." data-en="Share an 8-class pass with your friend. Double the motivation at a discounted rate." data-ru="Ходите на практики вместе! Абонемент на 8 занятий делится на двоих — выгоднее и веселее.">იარეთ ვარჯიშებზე მეგობართან ერთად! 8-ვიზიტიანი აბონემენტი იყოფა ორზე — მეტი მოტივაცია და უკეთესი ფასი.</p>
+                </div>
+                <div>
+                    <div class="border-t border-zinc-800 pt-3 mb-4 flex justify-between items-center">
+                        <span class="text-xs text-zinc-400" data-ka="ფასი ორზე:" data-en="Price for 2:" data-ru="Цена на двоих:">ფასი ორზე:</span>
+                        <span class="text-roseGold font-bold text-lg">340 GEL</span>
+                    </div>
+                    <button onclick="openBooking('Bring a Friend აბონემენტი', 340)" class="w-full py-3 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
+                        <span data-ka="ორმაგი აბონემენტის შეძენა" data-en="Get Duo Pass" data-ru="Купить дуо-абонемент">ორმაგი აბონემენტის შეძენა</span>
+                    </button>
+                </div>
             </div>
-            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition">
-                <div class="text-roseGold text-3xl mb-3">🧘‍♀️</div>
-                <h3 class="font-bold text-lg mb-2" data-ka="მცირე ჯგუფები" data-en="Intimate Groups" data-ru="Камерные группы">მცირე ჯგუფები</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed" data-ka="ვარჯიშები ტარდება მცირე ჯგუფებში, სადაც ინსტრუქტორი მაქსიმალურ ყურადღებას უთმობს თითოეულ მონაწილეს." data-en="Small class sizes ensuring tailored guidance and comfort for every practitioner." data-ru="Занятия в мини-группах, где инструктор уделяет внимание каждому практикующему.">ვარჯიშები ტარდება მცირე ჯგუფებში, სადაც ინსტრუქტორი მაქსიმალურ ყურადღებას უთმობს თითოეულ მონაწილეს.</p>
+
+            <!-- Offer 2: Photo + Yoga Combo -->
+            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-2xl">📸</span>
+                        <span class="bg-roseGold/20 text-roseGold text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Combo Offer</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2" data-ka="Aura Content & Harmony Combo" data-en="Aura Content & Harmony Combo" data-ru="Комбо «Контент и Гармония»">Aura Content & Harmony Combo</h3>
+                    <p class="text-xs text-zinc-400 mb-4 leading-relaxed" data-ka="1 საათი ფოტო-სტუდიის იჯარა კონტენტისთვის + 2 იოგას/პილატესის ჯგუფური გაკვეთილი საჩუქრად." data-en="1 hour photo studio rental for content + 2 group yoga or pilates classes included." data-ru="1 час аренды фотостудии для снимков + 2 групповых занятия йогой/пилатесом в подарок.">1 საათი ფოტო-სტუდიის იჯარა კონტენტისთვის + 2 იოგას/პილატესის ჯგუფური გაკვეთილი საჩუქრად.</p>
+                </div>
+                <div>
+                    <div class="border-t border-zinc-800 pt-3 mb-4 flex justify-between items-center">
+                        <span class="text-xs text-zinc-400" data-ka="კომბო ფასი:" data-en="Combo Price:" data-ru="Комбо цена:">კომბო ფასი:</span>
+                        <span class="text-roseGold font-bold text-lg">95 GEL</span>
+                    </div>
+                    <button onclick="openBooking('Content & Harmony Combo', 95)" class="w-full py-3 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
+                        <span data-ka="კომბო პაკეტის დაჯავშნა" data-en="Book Combo" data-ru="Забронировать комбо">კომბო პაკეტის დაჯავშნა</span>
+                    </button>
+                </div>
             </div>
-            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition">
-                <div class="text-roseGold text-3xl mb-3">📸</div>
-                <h3 class="font-bold text-lg mb-2" data-ka="ინსტაგრამ-ესთეტიკა" data-en="Instagrammable Space" data-ru="Инстаграмный дизайн">ინსტაგრამ-ესთეტიკა</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed" data-ka="სტუდიის თითოეული კუთხე შექმნილია ესთეტიკური ფოტოებისა და ვიდეო კონტენტის გადასაღებად." data-en="Every corner of our studio is designed to create stunning content and beautiful memories." data-ru="Каждый уголок нашей студии создан для идеальных фото и эстетичного контента.">სტუდიის თითოეული კუთხე შექმნილია ესთეტიკური ფოტოებისა და ვიდეო კონტენტის გადასაღებად.</p>
-            </div>
-            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition">
-                <div class="text-roseGold text-3xl mb-3">🌍</div>
-                <h3 class="font-bold text-lg mb-2" data-ka="საერთაშორისო გარემო" data-en="Multilingual Trainers" data-ru="Мультиязычная среда">საერთაშორისო გარემო</h3>
-                <p class="text-xs text-zinc-400 leading-relaxed" data-ka="ჩვენი ინსტრუქტორები ატარებენ პრაქტიკებს ქართულ, ინგლისურ და რუსულ ენებზე." data-en="Our certified instructors lead sessions in Georgian, English, and Russian." data-ru="Сертифицированные инструкторы ведут практики на грузинском, английском и русском.">ჩვენი ინსტრუქტორები ატარებენ პრაქტიკებს ქართულ, ინგლისურ და რუსულ ენებზე.</p>
+
+            <!-- Offer 3: Hall Rent for Events -->
+            <div class="glass-card p-6 rounded-2xl border-zinc-800 hover:border-roseGold transition flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-2xl">🏛️</span>
+                        <span class="bg-roseGold/20 text-roseGold text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Private Rent</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2" data-ka="დარბაზის იჯარა ღონისძიებისთვის" data-en="Hall Rental for Events" data-ru="Аренда зала под мероприятия">დარბაზის იჯარა ღონისძიებისთვის</h3>
+                    <p class="text-xs text-zinc-400 mb-4 leading-relaxed" data-ka="ჩაატარეთ თქვენი ვორქშოფი, მასტერკლასი, ჩაის ცერემონია ან ქალთა წრე ჩვენს ესთეტიკურ სივრცეში." data-en="Host your workshop, masterclass, tea ceremony, or women's circle in our serene studio." data-ru="Проведите ваш мастер-класс, воркшоп, чайную церемонию или женский круг в нашей студии.">ჩაატარეთ თქვენი ვორქშოფი, მასტერკლასი, ჩაის ცერემონია ან ქალთა წრე ჩვენს ესთეტიკურ სივრცეში.</p>
+                </div>
+                <div>
+                    <div class="border-t border-zinc-800 pt-3 mb-4 flex justify-between items-center">
+                        <span class="text-xs text-zinc-400" data-ka="საათობრივი:" data-en="Per Hour:" data-ru="Почасово:">საათობრივი:</span>
+                        <span class="text-roseGold font-bold text-lg">70 GEL</span>
+                    </div>
+                    <button onclick="openBooking('დარბაზის იჯარა ღონისძიებისთვის', 70)" class="w-full py-3 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
+                        <span data-ka="დარბაზის დაჯავშნა" data-en="Book Event Hall" data-ru="Забронировать зал">დარბაზის დაჯავშნა</span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES & PRICING -->
-    <section id="services" class="py-16 md:py-20 px-4 md:px-6 max-w-6xl mx-auto">
-        <div class="text-center mb-10 md:mb-12">
-            <span class="text-xs uppercase tracking-widest text-roseGold font-semibold" data-ka="სერვისები & აბონემენტები" data-en="Services & Passes" data-ru="Услуги и Абонементы">სერვისები & აბონემენტები</span>
-            <h2 class="text-2xl md:text-3xl font-light mt-1" data-ka="რას გთავაზობთ Aura Space Batumi-ში" data-en="What We Offer at Aura Space Batumi" data-ru="Что мы предлагаем в Aura Space Batumi">რას გთავაზობთ Aura Space Batumi-ში</h2>
+    <!-- DETAILED PRICING & CATEGORIES SECTION -->
+    <section id="pricing" class="py-16 md:py-20 px-4 md:px-6 max-w-6xl mx-auto bg-zinc-900/30 rounded-3xl border border-zinc-800">
+        <div class="text-center mb-12">
+            <span class="text-xs uppercase tracking-widest text-roseGold font-semibold" data-ka="სრული პრეისკურანტი" data-en="Full Price List" data-ru="Полный прайс-лист">სრული პრეისკურანტი</span>
+            <h2 class="text-2xl md:text-4xl font-light mt-1" data-ka="ფასები & აბონემენტები" data-en="Pricing & Subscriptions" data-ru="Цены и Абонементы">ფასები & აბონემენტები</h2>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-5 md:gap-6">
-            <!-- Service 1: Yoga & Pilates -->
-            <div class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition flex flex-col justify-between">
-                <div>
-                    <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=800');">
-                        <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30" data-ka="იოგა & პილატესი" data-en="Yoga & Pilates" data-ru="Йога и Пилатес">იოგა & პილატესი</span>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Category 1: Yoga & Fitness Passes -->
+            <div class="glass-card p-6 md:p-8 rounded-3xl border-zinc-800">
+                <div class="flex items-center gap-3 mb-6 pb-4 border-b border-zinc-800">
+                    <span class="text-2xl">🧘‍♀️</span>
+                    <div>
+                        <h3 class="font-bold text-xl text-roseGold" data-ka="იოგა, პილატესი & გაწელვები" data-en="Yoga, Pilates & Stretching" data-ru="Йога, Пилатес и Стретчинг">იოგა, პილატესი & გაწელვები</h3>
+                        <p class="text-xs text-zinc-400" data-ka="ჯგუფური და ინდივიდუალური პრაქტიკები" data-en="Group & Private Classes" data-ru="Групповые и индивидуальные практики">ჯგუფური და ინდივიდუალური პრაქტიკები</p>
                     </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-base md:text-lg mb-1" data-ka="ჯგუფური ვარჯიშები" data-en="Group Classes" data-ru="Групповые занятия">ჯგუფური ვარჯიშები</h3>
-                        <p class="text-xs text-zinc-400 mb-4" data-ka="ჰათჰა იოგა, ვინიასა ფლოუ, პილატესი, გაწელვები და სხეულის გაჯანსაღება." data-en="Hatha Yoga, Vinyasa Flow, Pilates, Stretching and mindfulness." data-ru="Хатха йога, Виньяса флоу, пилатес, стретчинг и оздоровление тела.">ჰათჰა იოგა, ვინიასა ფლოუ, პილატესი, გაწელვები და სხეულის გაჯანსაღება.</p>
-                        <div class="border-t border-zinc-800 pt-3 mb-4">
-                            <span class="text-xs text-zinc-400" data-ka="ერთჯერადი ვიზიტი:" data-en="Single Visit:" data-ru="Разовое посещение:">ერთჯერადი ვიზიტი:</span>
-                            <span class="text-roseGold font-bold text-base ml-2">30 GEL</span>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center pb-3 border-b border-zinc-800/60">
+                        <div>
+                            <p class="font-medium text-sm text-zinc-200" data-ka="პირველი საცდელი ვიზიტი" data-en="First Trial Visit" data-ru="Первое пробное занятие">პირველი საცდელი ვიზიტი</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="ახალი სტუმრებისთვის" data-en="For new guests" data-ru="Для новых гостей">ახალი სტუმრებისთვის</span>
                         </div>
+                        <span class="text-roseGold font-bold text-base">20 GEL</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pb-3 border-b border-zinc-800/60">
+                        <div>
+                            <p class="font-medium text-sm text-zinc-200" data-ka="ერთჯერადი ჯგუფური ვიზიტი" data-en="Single Group Class" data-ru="Разовое групповое занятие">ერთჯერადი ჯგუფური ვიზიტი</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="1 საათიანი პრაქტიკა" data-en="1 hour practice" data-ru="1 час практики">1 საათიანი პრაქტიკა</span>
+                        </div>
+                        <span class="text-roseGold font-bold text-base">30 GEL</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pb-3 border-b border-zinc-800/60">
+                        <div>
+                            <p class="font-medium text-sm text-zinc-200" data-ka="აბონემენტი 8 ვიზიტი" data-en="8-Class Monthly Pass" data-ru="Абонемент на 8 занятий">აბონემენტი 8 ვიზიტი</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="მოქმედებს 30 დღე" data-en="Valid for 30 days" data-ru="Действует 30 дней">მოქმედებს 30 დღე</span>
+                        </div>
+                        <span class="text-roseGold font-bold text-base">200 GEL</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pb-3 border-b border-zinc-800/60">
+                        <div>
+                            <p class="font-medium text-sm text-zinc-200" data-ka="აბონემენტი 12 ვიზიტი" data-en="12-Class Monthly Pass" data-ru="Абонемент на 12 занятий">აბონემენტი 12 ვიზიტი</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="მოქმედებს 30 დღე" data-en="Valid for 30 days" data-ru="Действует 30 дней">მოქმედებს 30 დღე</span>
+                        </div>
+                        <span class="text-roseGold font-bold text-base">270 GEL</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pb-3 border-b border-zinc-800/60 bg-roseGold/5 p-2 rounded-xl">
+                        <div>
+                            <p class="font-bold text-sm text-roseGold" data-ka="Unlimited Monthly Pass" data-en="Unlimited Monthly Pass" data-ru="Безлимитный абонемент">Unlimited Monthly Pass</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="უსაზღვრო ვიზიტები 1 თვე" data-en="Unlimited access for 1 month" data-ru="Неограниченное посещение 1 месяц">უსაზღვრო ვიზიტები 1 თვე</span>
+                        </div>
+                        <span class="text-roseGold font-bold text-base">350 GEL</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pt-1">
+                        <div>
+                            <p class="font-medium text-sm text-zinc-200" data-ka="ინდივიდუალური (1-on-1) ვარჯიში" data-en="1-on-1 Private Session" data-ru="Индивидуальное занятие">ინდივიდუალური (1-on-1) ვარჯიში</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="პერსონალურ ინსტრუქტორთან" data-en="With personal instructor" data-ru="С персональным тренером">პერსონალურ ინსტრუქტორთან</span>
+                        </div>
+                        <span class="text-roseGold font-bold text-base">70 GEL</span>
                     </div>
                 </div>
-                <div class="p-5 pt-0">
-                    <button onclick="openBooking('ჯგუფური ვარჯიში (ბათუმი)', 30)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
-                        <span data-ka="ვარჯიშზე ჩაწერა" data-en="Book Class" data-ru="Записаться">ვარჯიშზე ჩაწერა</span>
-                    </button>
-                </div>
+
+                <button onclick="openBooking('იოგას აბონემენტის შეძენა', 0)" class="w-full mt-6 bg-roseGold text-black font-semibold py-3 rounded-xl hover:bg-roseGold-dark transition text-xs">
+                    <span data-ka="აბონემენტის არჩევა" data-en="Select Pass" data-ru="Выбрать абонемент">აბონემენტის არჩევა</span>
+                </button>
             </div>
 
-            <!-- Service 2: Photo Studio Rental -->
-            <div class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition flex flex-col justify-between">
-                <div>
-                    <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=800');">
-                        <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30" data-ka="ფოტო სტუდია" data-en="Photo Studio" data-ru="Фотостудия">ფოტო სტუდია</span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-base md:text-lg mb-1" data-ka="ფოტო სტუდიის იჯარა" data-en="Photo Studio Rental" data-ru="Аренда фотостудии">ფოტო სტუდიის იჯარა</h3>
-                        <p class="text-xs text-zinc-400 mb-4" data-ka="მინიმალისტური ესთეტიკური ინტერიერი, პროფესიონალური განათება და დეკორი." data-en="Minimalist aesthetic interior, lighting props for fashion & personal shoots." data-ru="Минималистичный эстетичный интерьер, свет и реквизит для съемок.">მინიმალისტური ესთეტიკური ინტერიერი, პროფესიონალური განათება და დეკორი.</p>
-                        <div class="border-t border-zinc-800 pt-3 mb-4">
-                            <span class="text-xs text-zinc-400" data-ka="1 საათი:" data-en="1 Hour:" data-ru="1 Час:">1 საათი:</span>
-                            <span class="text-roseGold font-bold text-base ml-2">60 GEL</span>
-                        </div>
+            <!-- Category 2: Photo Studio & Space Rental -->
+            <div class="glass-card p-6 md:p-8 rounded-3xl border-zinc-800">
+                <div class="flex items-center gap-3 mb-6 pb-4 border-b border-zinc-800">
+                    <span class="text-2xl">📸</span>
+                    <div>
+                        <h3 class="font-bold text-xl text-roseGold" data-ka="ფოტო-სტუდია & სივრცის იჯარა" data-en="Photo Studio & Hall Rent" data-ru="Фотостудия и Аренда Зала">ფოტო-სტუდია & სივრცის იჯარა</h3>
+                        <p class="text-xs text-zinc-400" data-ka="ესთეტიკური ინტერიერი, სინათლე და ღონისძიებები" data-en="Aesthetic interior, pro light & events" data-ru="Эстетичный интерьер, свет и мероприятия">ესთეტიკური ინტერიერი, სინათლე და ღონისძიებები</p>
                     </div>
                 </div>
-                <div class="p-5 pt-0">
-                    <button onclick="openBooking('ფოტო სტუდიის ქირაობა (ბათუმი)', 60)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
-                        <span data-ka="სტუდიის დაჯავშნა" data-en="Rent Studio" data-ru="Забронировать">სტუდიის დაჯავშნა</span>
-                    </button>
-                </div>
-            </div>
 
-            <!-- Service 3: Memberships -->
-            <div class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition flex flex-col justify-between">
-                <div>
-                    <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800');">
-                        <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30" data-ka="აბონემენტები" data-en="Passes" data-ru="Абонементы">აბონემენტები</span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="font-bold text-base md:text-lg mb-1" data-ka="თვიური აბონემენტები" data-en="Monthly Passes" data-ru="Месячные абонементы">თვიური აბონემენტები</h3>
-                        <p class="text-xs text-zinc-400 mb-4" data-ka="8 ან 12-ვიზიტიანი პაკეტები რეგულარული პრაქტიკისთვის საუკეთესო ფასად." data-en="8 or 12 class monthly passes for regular practitioners at the best value." data-ru="Абонементы на 8 или 12 занятий для регулярных практик.">8 ან 12-ვიზიტიანი პაკეტები რეგულარული პრაქტიკისთვის საუკეთესო ფასად.</p>
-                        <div class="border-t border-zinc-800 pt-3 mb-4">
-                            <span class="text-xs text-zinc-400" data-ka="8 ვიზიტი:" data-en="8 Classes:" data-ru="8 Занятий:">8 ვიზიტი:</span>
-                            <span class="text-roseGold font-bold text-base ml-2">200 GEL</span>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center pb-3 border-b border-zinc-800/60">
+                        <div>
+                            <p class="font-medium text-sm text-zinc-200" data-ka="სტუდიის იჯარა (1 საათი)" data-en="Studio Rental (1 hour)" data-ru="Аренда студии (1 час)">სტუდიის იჯარა (1 საათი)</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="შედის პროფესიონალური განათება" data-en="Includes pro studio lights" data-ru="Включает студийный свет">შედის პროფესიონალური განათება</span>
                         </div>
+                        <span class="text-roseGold font-bold text-base">60 GEL</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pb-3 border-b border-zinc-800/60">
+                        <div>
+                            <p class="font-medium text-sm text-zinc-200" data-ka="სტუდიის იჯარა (2+ საათი)" data-en="Studio Rental (2+ hours)" data-ru="Аренда студии (от 2 часов)">სტუდიის იჯარა (2+ საათი)</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="ფასდაკლება ხანგრძლივ სესიებზე" data-en="Discounted hourly rate" data-ru="Скидка на долгие съемки">ფასდაკლება ხანგრძლივ სესიებზე</span>
+                        </div>
+                        <span class="text-roseGold font-bold text-base">50 GEL / სთ</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pb-3 border-b border-zinc-800/60">
+                        <div>
+                            <p class="font-medium text-sm text-zinc-200" data-ka="Content Day Package (3 საათი)" data-en="Content Day Package (3 hrs)" data-ru="Пакет Content Day (3 часа)">Content Day Package (3 საათი)</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="ბრენდებისა და ბლოგერებისთვის" data-en="For brands & content creators" data-ru="Для брендов и блогеров">ბრენდებისა და ბლოგერებისთვის</span>
+                        </div>
+                        <span class="text-roseGold font-bold text-base">140 GEL</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pb-3 border-b border-zinc-800/60">
+                        <div>
+                            <p class="font-medium text-sm text-zinc-200" data-ka="დარბაზის იჯარა ვორქშოფისთვის" data-en="Hall Rent for Workshops" data-ru="Аренда зала под воркшоп">დარბაზის იჯარა ვორქშოფისთვის</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="1 საათი (მაქს. 15 კაცი)" data-en="1 hour (up to 15 people)" data-ru="1 час (до 15 человек)">1 საათი (მაქს. 15 კაცი)</span>
+                        </div>
+                        <span class="text-roseGold font-bold text-base">70 GEL</span>
+                    </div>
+
+                    <div class="flex justify-between items-center pt-1">
+                        <div>
+                            <p class="font-medium text-sm text-zinc-200" data-ka="ინდივიდუალური ფოტოსესია მობილოგრაფით" data-en="Express Content Photo Shoot" data-ru="Контент-съемка с мобилографом">ინდივიდუალური ფოტოსესია მობილოგრაფით</p>
+                            <span class="text-[11px] text-zinc-400" data-ka="სტუდიის იჯარა + გადაღება + Reels" data-en="Studio rent + shooting + 2 Reels" data-ru="Аренда + съемка + 2 Reels">სტუდიის იჯარა + გადაღება + Reels</span>
+                        </div>
+                        <span class="text-roseGold font-bold text-base">150 GEL</span>
                     </div>
                 </div>
-                <div class="p-5 pt-0">
-                    <button onclick="openBooking('თვიური აბონემენტი (ბათუმი)', 200)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
-                        <span data-ka="აბონემენტის შეძენა" data-en="Get Pass" data-ru="Купить абонемент">აბონემენტის შეძენა</span>
-                    </button>
-                </div>
+
+                <button onclick="openBooking('ფოტო სტუდიის / დარბაზის იჯარა', 0)" class="w-full mt-6 bg-zinc-800 hover:bg-roseGold hover:text-black transition font-semibold py-3 rounded-xl text-xs">
+                    <span data-ka="სტუდიის დაჯავშნა" data-en="Book Studio Time" data-ru="Забронировать студию">სტუდიის დაჯავშნა</span>
+                </button>
             </div>
         </div>
     </section>
@@ -244,46 +351,46 @@
         <div class="space-y-4">
             <div class="glass-card p-5 rounded-2xl border-zinc-800">
                 <h3 class="font-semibold text-sm md:text-base text-roseGold mb-2" 
-                    data-ka="1. სად მდებარეობს სტუდია ბათუმში?" 
-                    data-en="1. Where is the studio located in Batumi?" 
-                    data-ru="1. Где находится студия в Батуми?">
-                    1. სად მდებარეობს სტუდია ბათუმში?
+                    data-ka="1. სად მდებარეობს Aura Space ბათუმში?" 
+                    data-en="1. Where is Aura Space located in Batumi?" 
+                    data-ru="1. Где находится Aura Space в Батуми?">
+                    1. სად მდებარეობს Aura Space ბათუმში?
                 </h3>
                 <p class="text-xs md:text-sm text-zinc-300 font-light" 
-                   data-ka="Aura Space Batumi მდებარეობს სელიმ ხიმშიაშვილის ქუჩა №17-ში (ჭავჭავაძისა და გორგილაძის ქუჩების სიახლოვეს)." 
-                   data-en="Aura Space Batumi is located at 17 Selim Khimshiashvili Street (near Chavchavadze and Gorgiladze streets)." 
-                   data-ru="Aura Space Batumi находится по адресу ул. Селима Химшиашвили №17 (недалеко от ул. Чавчавадзе и Горгиладзе).">
-                    Aura Space Batumi მდებარეობს სელიმ ხიმშიაშვილის ქუჩა №17-ში (ჭავჭავაძისა და გორგილაძის ქუჩების სიახლოვეს).
+                   data-ka="ჩვენ მდებარეობთ ბათუმის ცენტრში, სელიმ ხიმშიაშვილის ქუჩა №17-ში (გინდოდეთ ვარჯიში თუ ფოტოსესია, მარტივად მოსაგნებია)." 
+                   data-en="We are located at 17 Selim Khimshiashvili St in central Batumi." 
+                   data-ru="Мы находимся в центре Батуми, по адресу ул. Селима Химшиашвили №17.">
+                    ჩვენ მდებარეობთ ბათუმის ცენტრში, სელიმ ხიმშიაშვილის ქუჩა №17-ში (გინდოდეთ ვარჯიში თუ ფოტოსესია, მარტივად მოსაგნებია).
                 </p>
             </div>
 
             <div class="glass-card p-5 rounded-2xl border-zinc-800">
                 <h3 class="font-semibold text-sm md:text-base text-roseGold mb-2" 
-                    data-ka="2. მჭირდება თუ არა წინასწარი ჩაწერა ვარჯიშზე?" 
-                    data-en="2. Is advance booking required for classes?" 
-                    data-ru="2. Нужна ли предварительная запись на занятия?">
-                    2. მჭირდება თუ არა წინასწარი ჩაწერა ვარჯიშზე?
+                    data-ka="2. როგორ ჩავეწერო საცდელ ვარჯიშზე 20 ლარად?" 
+                    data-en="2. How do I book the trial class for 20 GEL?" 
+                    data-ru="2. Как записаться на пробное занятие за 20 GEL?">
+                    2. როგორ ჩავეწერო საცდელ ვარჯიშზე 20 ლარად?
                 </h3>
                 <p class="text-xs md:text-sm text-zinc-300 font-light" 
-                   data-ka="დიახ, რადგან ადგილები შეზღუდულია (ვვარჯიშობთ მცირე ჯგუფებში), წინასწარი ჩაწერა აუცილებელია WhatsApp-ით ან ინსტაგრამის საშუალებით." 
-                   data-en="Yes, because class sizes are limited for comfort, advance reservation via WhatsApp or Instagram Direct is required." 
-                   data-ru="Да, так как группы небольшие, предварительная запись обязательна через WhatsApp или Instagram.">
-                    დიახ, რადგან ადგილები შეზღუდულია (ვვარჯიშობთ მცირე ჯგუფებში), წინასწარი ჩაწერა აუცილებელია WhatsApp-ით ან ინსტაგრამის საშუალებით.
+                   data-ka="დააჭირეთ 'ჩაეწერე საცდელ ვარჯიშზე' ღილაკს, შეავსეთ სახელი და ნომერი, და ჩვენი მენეჯერი მყისიერად დაგიდასტურებთ დროს WhatsApp-ით." 
+                   data-en="Click the 'Book Trial Class' button, enter your details, and our manager will confirm your spot on WhatsApp." 
+                   data-ru="Нажмите кнопку «Записаться на пробное», заполните форму и менеджер забронирует за вами место через WhatsApp.">
+                    დააჭირეთ 'ჩაეწერე საცდელ ვარჯიშზე' ღილაკს, შეავსეთ სახელი და ნომერი, და ჩვენი მენეჯერი მყისიერად დაგიდასტურებთ დროს WhatsApp-ით.
                 </p>
             </div>
 
             <div class="glass-card p-5 rounded-2xl border-zinc-800">
                 <h3 class="font-semibold text-sm md:text-base text-roseGold mb-2" 
-                    data-ka="3. დამწყებებისთვის თუ არის შესაფერისი იოგა და პილატესი?" 
-                    data-en="3. Are classes suitable for beginners?" 
-                    data-ru="3. Подходят ли занятия для новичков?">
-                    3. დამწყებებისთვის თუ არის შესაფერისი იოგა და პილატესი?
+                    data-ka="3. რა უნდა ვიქონიო თან ვარჯიშზე მოსვლისას?" 
+                    data-en="3. What should I bring to class?" 
+                    data-ru="3. Что нужно брать с собой на занятие?">
+                    3. რა უნდა ვიქონიო თან ვარჯიშზე მოსვლისას?
                 </h3>
                 <p class="text-xs md:text-sm text-zinc-300 font-light" 
-                   data-ka="რა თქმა უნდა! ჩვენი პრაქტიკები მორგებულია ნებისმიერი მომზადების დონის მქონე ადამიანზე. ინსტრუქტორი ინდივიდუალურად გეხმარებათ." 
-                   data-en="Absolutely! Our classes are designed for all levels, and our instructors provide individual adaptations." 
-                   data-ru="Конечно! Наши занятия адаптированы для любого уровня подготовки, инструктор всегда поможет.">
-                    რა თქმა უნდა! ჩვენი პრაქტიკები მორგებულია ნებისმიერი მომზადების დონის მქონე ადამიანზე. ინსტრუქტორი ინდივიდუალურად გეხმარებათ.
+                   data-ka="მხოლოდ კომფორტული სპორტული ტანსაცმელი! იოგას ხალიჩები, ბლოკები, წყალი და პირსახოცები სტუდიაში დაგხვდებათ." 
+                   data-en="Just comfortable workout clothes! Yoga mats, blocks, water, and towels are all provided in the studio." 
+                   data-ru="Только комфортную спортивную одежду! Коврики, блоки, вода и полотенца ждут вас в студии.">
+                    მხოლოდ კომფორტული სპორტული ტანსაცმელი! იოგას ხალიჩები, ბლოკები, წყალი და პირსახოცები სტუდიაში დაგხვდებათ.
                 </p>
             </div>
         </div>
@@ -372,7 +479,7 @@
             const name = document.getElementById('modalName').value;
             const phone = document.getElementById('modalPhone').value;
             
-            const text = `Aura Space Batumi Booking Request:\nService: ${service}\nName: ${name}\nContact: ${phone}`;
+            const text = `Aura Space Batumi Booking Request:\nOffer/Service: ${service}\nName: ${name}\nContact: ${phone}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
             closeBooking();
         }
