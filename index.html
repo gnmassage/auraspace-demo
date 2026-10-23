@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Space Tbilisi | Photo Studio, Yoga & Pilates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        roseGold: { DEFAULT: '#E8B4B8', dark: '#C98A90', light: '#FDF6F6' },
+                        bgDark: '#0D0D0E',
+                        cardDark: '#161618'
+                    },
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0D0D0E; color: #FDF6F6; }
+        .glass-card { background: rgba(22, 22, 24, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(232, 180, 184, 0.2); }
+        .rose-glow { box-shadow: 0 0 25px rgba(232, 180, 184, 0.2); }
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(13, 13, 14, 0.75), rgba(13, 13, 14, 0.95)), 
+                        url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+        @keyframes float-pulse {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-6px) scale(1.05); }
+        }
+        .pulse-whatsapp { animation: float-pulse 3s infinite ease-in-out; }
+    </style>
+</head>
+<body class="antialiased selection:bg-roseGold selection:text-black">
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%AF%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B2%20Aura%20space" target="_blank" 
+       class="fixed bottom-5 right-5 z-50 pulse-whatsapp bg-emerald-500 hover:bg-emerald-600 text-white p-3.5 md:p-4 rounded-full shadow-2xl flex items-center gap-2.5 border border-emerald-300/30">
+        <svg class="w-6 h-6 md:w-7 md:h-7 fill-current" viewBox="0 0 24 24"><path d="M12.031 0c-6.627 0-12 5.373-12 12 0 2.159.57 4.186 1.564 5.95l-1.625 5.93 6.069-1.59c1.71.928 3.67 1.458 5.762 1.458 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12zm6.529 16.993c-.27.761-1.348 1.401-2.179 1.579-.571.121-1.314.218-3.821-.82-3.208-1.328-5.277-4.578-5.437-4.79-.159-.213-1.302-1.733-1.302-3.303 0-1.57 1.222-2.344 1.656-2.344.27 0 .541.002.778.012.253.01.591-.095.927.712.347.832 1.189 2.903 1.294 3.118.106.213.177.464.035.748-.142.283-.213.46-.425.712-.213.253-.448.563-.641.756-.213.213-.435.445-.187.871.248.425 1.103 1.82 2.37 2.949 1.63 1.452 3.003 1.902 3.428 2.115.425.213.673.177.922-.106.248-.283 1.063-1.24 1.346-1.665.283-.425.567-.355.957-.213.39.142 2.479 1.168 2.904 1.381.425.213.709.319.815.5.106.177.106 1.028-.164 1.789z"/></svg>
+        <span class="hidden md:inline font-semibold text-xs md:text-sm pr-1" id="waText">Написать нам</span>
+    </a>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-white/5 py-3.5 px-4 md:px-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2 md:gap-3">
+                <span class="text-xl md:text-2xl font-bold tracking-tight text-roseGold">Aura space</span>
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-zinc-400 border-l border-zinc-700 pl-2 md:pl-3">Tbilisi</span>
+            </div>
+            
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-zinc-300">
+                <a href="#services" class="hover:text-roseGold transition" data-en="Services" data-ru="Услуги">Услуги</a>
+                <a href="#studio" class="hover:text-roseGold transition" data-en="Photo Studio" data-ru="Фотостудия">Фотостудия</a>
+                <a href="#classes" class="hover:text-roseGold transition" data-en="Yoga & Pilates" data-ru="Йога и Пилатес">Йога и Пилатес</a>
+                <a href="#location" class="hover:text-roseGold transition" data-en="Location" data-ru="Локация">Локация</a>
+            </nav>
+
+            <div class="flex items-center gap-2.5 md:gap-4">
+                <div class="flex items-center bg-zinc-900 p-0.5 rounded-full border border-zinc-800 text-[11px] md:text-xs">
+                    <button onclick="switchLang('ru')" id="btnRu" class="px-2.5 py-1 rounded-full bg-roseGold text-black font-bold transition">RUS</button>
+                    <button onclick="switchLang('en')" id="btnEn" class="px-2.5 py-1 rounded-full text-zinc-400 hover:text-white transition">ENG</button>
+                </div>
+
+                <button onclick="openBooking('Забронировать визит', 0)" class="bg-roseGold text-black font-semibold text-xs md:text-sm px-3.5 py-2 md:px-5 md:py-2.5 rounded-full hover:bg-roseGold-dark transition rose-glow whitespace-nowrap">
+                    <span data-en="Book Visit" data-ru="Забронировать">Забронировать</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-28 md:pt-36 pb-16 md:pb-20 px-4 md:px-6 hero-bg min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-12 gap-8 md:gap-12 items-center">
+            <div class="md:col-span-7">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card text-xs text-roseGold mb-4 md:mb-6 border border-roseGold/30">
+                    <span>📍</span>
+                    <span class="text-zinc-200">Бери Габриел Салоси 3, Тбилиси</span>
+                </div>
+
+                <h1 class="text-3xl md:text-6xl font-light tracking-tight leading-tight mb-4 md:mb-6">
+                    <span data-en="Create Your Aura at" data-ru="Создай свою ауру в">Создай свою ауру в</span> 
+                    <span class="font-semibold text-roseGold">Aura space</span>
+                </h1>
+                <p class="text-zinc-300 text-sm md:text-lg mb-6 md:mb-8 max-w-xl font-light leading-relaxed" data-en="Aesthetic Photo Studio, Yoga, Pilates & Group Workouts in Tbilisi." data-ru="Эстетичная фотостудия, йога, пилатес и групповые тренировки в Тбилиси.">
+                    Эстетичная фотостудия, йога, пилатес и групповые тренировки в Тбилиси.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+                    <a href="#studio" class="bg-roseGold text-black font-semibold px-6 md:px-8 py-3.5 md:py-4 rounded-full text-center hover:bg-roseGold-dark transition rose-glow text-sm">
+                        <span data-en="Rent Photo Studio" data-ru="Аренда фотостудии">Аренда фотостудии</span>
+                    </a>
+                    <a href="#classes" class="border border-zinc-700 text-zinc-300 font-medium px-6 md:px-8 py-3.5 md:py-4 rounded-full text-center hover:bg-zinc-800 transition text-sm">
+                        <span data-en="Yoga & Pilates" data-ru="Занятия и Йога">Занятия и Йога</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Instant Booking Card -->
+            <div class="md:col-span-5">
+                <div class="glass-card p-5 md:p-8 rounded-3xl relative gold-border rose-glow">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-[10px] uppercase text-roseGold font-semibold tracking-wider" data-en="Studio & Classes" data-ru="Пространство">Пространство</span>
+                        <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full">Tbilisi Studio</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-1.5" data-en="Book Studio Time or Workout" data-ru="Забронируйте время или урок">Забронируйте время или урок</h3>
+                    <p class="text-xs text-zinc-400 mb-5" data-en="Photo studio rent, yoga flow, pilates, and personal training." data-ru="Аренда фотостудии, йога, пилатес и групповые практики.">Аренда фотостудии, йога, пилатес и групповые практики.</p>
+
+                    <button onclick="openBooking('Бронь пространств Aura space', 0)" class="w-full bg-roseGold text-black font-semibold py-3.5 md:py-4 rounded-xl hover:bg-roseGold-dark transition shadow-lg text-center text-sm">
+                        <span data-en="Reserve Slot Online" data-ru="Забронировать онлайн">Забронировать онлайн</span>
+                    </button>
+                    <p class="text-[10px] md:text-[11px] text-center text-zinc-500 mt-2.5">🔒 Мгновенное подтверждение в WhatsApp / Telegram</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES / DIRECTIONS SECTION -->
+    <section id="services" class="py-16 md:py-20 px-4 md:px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-10 md:mb-12">
+            <span class="text-xs uppercase tracking-widest text-roseGold font-semibold" data-en="Our Directions" data-ru="Направления">Направления</span>
+            <h2 class="text-2xl md:text-3xl font-light mt-1" data-en="What We Offer at Aura space" data-ru="Что есть в Aura space">Что есть в Aura space</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5 md:gap-6">
+            <!-- Direction 1: Photo Studio -->
+            <div id="studio" class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition">
+                <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=800');">
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30">Фотостудия</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-base md:text-lg mb-1" data-en="Aesthetic Photo Studio" data-ru="Аренда фотостудии">Аренда фотостудии</h3>
+                    <p class="text-xs text-zinc-400 mb-4" data-en="Ideal light, stylish interior, and props for personal and commercial shoots." data-ru="Светлое пространство, эстетичный интерьер для съемок и контента.">Светлое пространство, эстетичный интерьер для съемок и контента.</p>
+                    <button onclick="openBooking('Аренда Фотостудии', 0)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
+                        <span data-en="Book Photo Studio" data-ru="Забронировать съемку">Забронировать съемку</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Direction 2: Yoga & Pilates -->
+            <div id="classes" class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition">
+                <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=800');">
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30">Йога и Пилатес</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-base md:text-lg mb-1" data-en="Yoga & Pilates" data-ru="Йога и Пилатес">Йога и Пилатес</h3>
+                    <p class="text-xs text-zinc-400 mb-4" data-en="Soft body practice, posture correction, and mental relax." data-ru="Мягкие практики для гибкости, осанки и гармонии тела.">Мягкие практики для гибкости, осанки и гармонии тела.</p>
+                    <button onclick="openBooking('Занятие Йога/Пилатес', 0)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
+                        <span data-en="Book Practice" data-ru="Записаться на урок">Записаться на урок</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Direction 3: Group Training -->
+            <div class="glass-card rounded-2xl overflow-hidden border-zinc-800 hover:border-roseGold transition">
+                <div class="h-44 md:h-48 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800');">
+                    <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-roseGold text-[11px] px-3 py-1 rounded-full border border-roseGold/30">Групповые практики</span>
+                </div>
+                <div class="p-5">
+                    <h3 class="font-bold text-base md:text-lg mb-1" data-en="Group Classes" data-ru="Групповые тренировки">Групповые тренировки</h3>
+                    <p class="text-xs text-zinc-400 mb-4" data-en="Small groups for effective fitness and personal guidance." data-ru="Уютные группы для эффективных тренировок და тонуса.">Уютные группы для эффективных тренировок და тонуса.</p>
+                    <button onclick="openBooking('Групповая тренировка', 0)" class="w-full py-2.5 bg-zinc-800 hover:bg-roseGold hover:text-black font-semibold text-xs rounded-xl transition">
+                        <span data-en="Join Group" data-ru="Записаться в группу">Записаться в группу</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section id="location" class="py-12 md:py-16 px-4 md:px-6 bg-zinc-900/40 border-y border-zinc-800/80">
+        <div class="max-w-4xl mx-auto glass-card p-6 md:p-8 rounded-3xl border border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <span class="text-xs uppercase text-roseGold font-semibold">Location</span>
+                <h3 class="text-xl md:text-2xl font-light mt-1">Ждем вас в Aura space</h3>
+                <p class="text-xs text-zinc-400 mt-1">Тбилиси, ул. Бери Габриел Салоси 3</p>
+            </div>
+            <button onclick="openBooking('Консультация / Визит', 0)" class="w-full md:w-auto bg-roseGold text-black px-6 py-3 rounded-xl font-semibold text-xs hover:bg-roseGold-dark transition text-center">
+                Задать вопрос / Записаться
+            </button>
+        </div>
+    </section>
+
+    <!-- BOOKING MODAL -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="glass-card max-w-md w-full p-5 md:p-8 rounded-3xl relative gold-border">
+            <button onclick="closeBooking()" class="absolute top-4 right-4 text-zinc-400 hover:text-white text-xl">✕</button>
+            
+            <h3 class="text-lg md:text-xl font-bold text-roseGold mb-1" id="modalTitle">Бронирование в Aura space</h3>
+            <p class="text-xs text-zinc-400 mb-5">Оставьте контакты — администратор ответит в течение 10 минут.</p>
+
+            <form onsubmit="submitBooking(event)" class="space-y-3.5">
+                <input type="hidden" id="modalService" value="">
+                
+                <div>
+                    <label class="block text-xs text-zinc-400 mb-1">Ваше Имя</label>
+                    <input type="text" id="modalName" required placeholder="Анна" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-2.5 md:py-3 text-sm text-white focus:outline-none focus:border-roseGold">
+                </div>
+                <div>
+                    <label class="block text-xs text-zinc-400 mb-1">Телефон / WhatsApp / Telegram</label>
+                    <input type="tel" id="modalPhone" required placeholder="+995 ..." class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-2.5 md:py-3 text-sm text-white focus:outline-none focus:border-roseGold">
+                </div>
+
+                <button type="submit" class="w-full bg-roseGold text-black font-semibold py-3.5 rounded-xl hover:bg-roseGold-dark transition mt-2 text-xs md:text-sm">
+                    Подтвердить и отправить
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let currentLang = 'ru';
+
+        function switchLang(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.innerText = el.getAttribute(`data-${lang}`);
+            });
+            if(lang === 'en') {
+                document.getElementById('btnEn').className = "px-2.5 py-1 rounded-full bg-roseGold text-black font-bold transition";
+                document.getElementById('btnRu').className = "px-2.5 py-1 rounded-full text-zinc-400 hover:text-white transition";
+                document.getElementById('waText').innerText = "Chat with us";
+            } else {
+                document.getElementById('btnRu').className = "px-2.5 py-1 rounded-full bg-roseGold text-black font-bold transition";
+                document.getElementById('btnEn').className = "px-2.5 py-1 rounded-full text-zinc-400 hover:text-white transition";
+                document.getElementById('waText').innerText = "Написать нам";
+            }
+        }
+
+        function openBooking(serviceName) {
+            document.getElementById('modalService').value = serviceName;
+            document.getElementById('modalTitle').innerText = serviceName;
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function closeBooking() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function submitBooking(e) {
+            e.preventDefault();
+            const service = document.getElementById('modalService').value;
+            const name = document.getElementById('modalName').value;
+            const phone = document.getElementById('modalPhone').value;
+            
+            const text = `Заявка с сайта Aura space!\nНаправление: ${service}\nИмя: ${name}\nТелефон: ${phone}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+            closeBooking();
+        }
+
+        window.onload = function() {
+            switchLang('ru');
+        };
+    </script>
+</body>
+</html>
